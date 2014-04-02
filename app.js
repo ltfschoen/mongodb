@@ -41,6 +41,9 @@ app.get('/', routes.index);
 // map to /routes/user.js and call 'list' function
 app.get('/users', user.list);
 
+// map to dashboard URI /routes/dashboard.js
+app.get('/dashboard', routes.dashboard);
+
 // create http server and launch
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
